@@ -1,0 +1,47 @@
+# Copy this file to config.yaml and edit it.
+
+brand:
+  name: Acme CRM
+  # Every way the brand might be written in an answer
+  aliases: ["Acme CRM", "AcmeCRM", "Acme"]
+  # Used to check whether engines cite your site as a source
+  domain: acmecrm.com
+
+competitors:
+  - name: HubSpot
+    aliases: ["HubSpot", "Hubspot CRM"]
+    domain: hubspot.com
+  - name: Pipedrive
+    domain: pipedrive.com
+  - name: Zoho CRM
+    aliases: ["Zoho CRM", "Zoho"]
+    domain: zoho.com
+  - name: Salesforce
+    aliases: ["Salesforce", "Sales Cloud"]
+    domain: salesforce.com
+  - name: Freshsales
+    aliases: ["Freshsales", "Freshworks CRM"]
+
+# The questions your buyers actually ask. Write them the way a person would type them.
+prompts:
+  - What is the best CRM for a small marketing agency?
+  - Best CRM for a 10 person sales team on a budget
+  - HubSpot alternatives that are cheaper
+  - Which CRM is easiest to set up without a developer?
+  - CRM with built-in email sequences and WhatsApp integration
+  - What CRM do B2B startups use in 2026?
+
+# Engines to query. Remove any you don't have an API key for.
+# Model names change often, so check each provider's docs for current names.
+engines:
+  openai:
+    model: gpt-4.1-mini
+  anthropic:
+    model: claude-haiku-5-5
+  perplexity:
+    model: sonar
+  gemini:
+    model: gemini-2.5-flash
+
+# Answers vary between runs. 2 or 3 runs per prompt gives a steadier number.
+runs_per_prompt: 1
